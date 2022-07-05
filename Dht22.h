@@ -1,0 +1,25 @@
+/*
+  Dht22.h - Library for reading from Dht22 sensor
+  Created by Željko Eremić, May 30, 2020.
+  Released into the public domain.
+
+  DHT22      NODEMCU
+  -------------
+  DATA       D3
+  VCC        5V
+  GND        0V
+  
+*/
+#ifndef Dht22_h
+#define Dht22_h
+#include "Arduino.h"
+
+class Dht22
+{
+  public:
+    Dht22();
+    float ReadDht22temperature();
+    float ReadDht22humidity();    
+};
+
+#endif
