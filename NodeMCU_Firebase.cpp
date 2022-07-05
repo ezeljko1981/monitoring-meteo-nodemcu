@@ -72,17 +72,17 @@ void NodeMCU_Firebase::Loop()
 
       Serial.print("Writing preparation for humidity: ");
       Serial.print(m_currentHumidity);
-      Firebase.setFloat("/meteoarchive5_current/relhumidity", m_currentHumidity);
-      Firebase.setFloat("/meteoarchive5_current/temperature", m_currentTemperature);
-      Firebase.setInt("/meteoarchive5_current/atmpressure", m_currentPressure);   
-      Firebase.setInt("/meteoarchive5_current/dayofweek", m_dayOfWeek);      
-      Firebase.setString("/meteoarchive5_current/time", m_time);  
+      Firebase.setFloat("/meteoarchive3_current/relhumidity", m_currentHumidity);
+      Firebase.setFloat("/meteoarchive3_current/temperature", m_currentTemperature);
+      Firebase.setInt("/meteoarchive3_current/atmpressure", m_currentPressure);   
+      Firebase.setInt("/meteoarchive3_current/dayofweek", m_dayOfWeek);      
+      Firebase.setString("/meteoarchive3_current/time", m_time);  
       
-      Firebase.setString("/meteoarchive5/" + smc + "/time", m_time); 
-      Firebase.setFloat("/meteoarchive5/" + smc + "/relhumidity", m_currentHumidity);
-      Firebase.setFloat("/meteoarchive5/" + smc + "/temperature", m_currentTemperature);
-      Firebase.setInt("/meteoarchive5/" + smc + "/atmpressure", m_currentPressure);   
-      Firebase.setInt("/meteoarchive5/" + smc + "/dayofweek", m_dayOfWeek);                   
+      Firebase.setString("/meteoarchive3/" + smc + "/time", m_time); 
+      Firebase.setFloat("/meteoarchive3/" + smc + "/relhumidity", m_currentHumidity);
+      Firebase.setFloat("/meteoarchive3/" + smc + "/temperature", m_currentTemperature);
+      Firebase.setInt("/meteoarchive3/" + smc + "/atmpressure", m_currentPressure);   
+      Firebase.setInt("/meteoarchive3/" + smc + "/dayofweek", m_dayOfWeek);                   
       
       m_NextNodeMCU_FirebaseState = IDLE_STATE;
       mc++;
